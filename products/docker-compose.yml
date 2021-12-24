@@ -1,0 +1,14 @@
+version: '3.3'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: chicpro/ubuntu2004-apache2-php74
+    container_name: study-php-apache
+    ports:
+      - "90:80"
+    restart: always
+    volumes:
+      - ./html:/var/www/html/
